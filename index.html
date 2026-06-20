@@ -3,44 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Космический Защитник</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-container">
-        <!-- ГЛАВНОЕ МЕНЮ -->
-        <div id="mainMenu">
-            <div id="menuContent">
-                <h1>КОСМИЧЕСКИЙ ЗАЩИТНИК</h1>
-                <p>Выберите уровень и нажмите «Начать игру»</p>
-                <div id="levelSelector">
-                    <span>УРОВЕНЬ:</span>
-                    <button data-level="1" class="selected">ЛЁГКИЙ</button>
-                    <button data-level="2">СРЕДНИЙ</button>
-                    <button data-level="3">СЛОЖНЫЙ</button>
+    <div id="game-wrapper">
+        <div id="game-container">
+            <!-- ГЛАВНОЕ МЕНЮ -->
+            <div id="mainMenu">
+                <div id="menuContent">
+                    <h1>КОСМИЧЕСКИЙ ЗАЩИТНИК</h1>
+                    <p>Выберите режим и сложность</p>
+                    <div id="modeSelector">
+                        <span>РЕЖИМ:</span>
+                        <button data-mode="survival" class="selected">ВЫЖИВАНИЕ</button>
+                        <button data-mode="reaction">РЕАКЦИЯ</button>
+                    </div>
+                    <div id="difficultySelector">
+                        <span>СЛОЖНОСТЬ:</span>
+                        <button data-diff="easy" class="selected">ЛЁГКАЯ</button>
+                        <button data-diff="normal">НОРМАЛЬНАЯ</button>
+                        <button data-diff="hard">СЛОЖНАЯ</button>
+                    </div>
+                    <p id="controlsHint">
+                        УПРАВЛЕНИЕ: WASD — движение, МЫШЬ — прицел, ЛКМ — стрельба<br>
+                        ПРОБЕЛ — БОМБА | ESC — пауза
+                    </p>
+                    <button id="startButton">НАЧАТЬ ИГРУ</button>
                 </div>
-                <p id="controlsHint">
-                    УПРАВЛЕНИЕ: WASD — движение, МЫШЬ — прицел, ЛКМ — стрельба<br>
-                    ESC — пауза
-                </p>
-                <button id="startButton">НАЧАТЬ ИГРУ</button>
             </div>
-        </div>
 
-        <!-- КНОПКА ПАУЗЫ -->
-        <button id="pauseBtn">⏸ ПАУЗА</button>
+            <!-- КНОПКА ПАУЗЫ -->
+            <button id="pauseBtn">⏸ ПАУЗА</button>
 
-        <!-- МЕНЮ ПАУЗЫ -->
-        <div id="pauseMenu">
-            <div id="pauseMenuContent">
-                <h2>⏸ ПАУЗА</h2>
-                <button id="resumeBtn">▶ ПРОДОЛЖИТЬ</button>
-                <button id="restartBtn">🔄 НАЧАТЬ ЗАНОВО</button>
-                <button id="quitBtn">🏠 ВЫЙТИ В МЕНЮ</button>
+            <!-- МЕНЮ ПАУЗЫ -->
+            <div id="pauseMenu">
+                <div id="pauseMenuContent">
+                    <h2>⏸ ПАУЗА</h2>
+                    <button id="resumeBtn">▶ ПРОДОЛЖИТЬ</button>
+                    <button id="restartBtn">🔄 НАЧАТЬ ЗАНОВО</button>
+                    <button id="quitBtn">🏠 ВЫЙТИ В МЕНЮ</button>
+                </div>
             </div>
-        </div>
 
-        <canvas id="gameCanvas" width="800" height="600"></canvas>
+            <canvas id="gameCanvas"></canvas>
+        </div>
     </div>
 
     <script src="game.js"></script>
