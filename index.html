@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Космический Защитник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- ГЛАВНОЕ МЕНЮ -->
+        <div id="mainMenu">
+            <div id="menuContent">
+                <h1>КОСМИЧЕСКИЙ ЗАЩИТНИК</h1>
+                <p>Выберите уровень и нажмите «Начать игру»</p>
+                <div id="levelSelector">
+                    <span>УРОВЕНЬ:</span>
+                    <button data-level="1" class="selected">ЛЁГКИЙ</button>
+                    <button data-level="2">СРЕДНИЙ</button>
+                    <button data-level="3">СЛОЖНЫЙ</button>
+                </div>
+                <p id="controlsHint">
+                    УПРАВЛЕНИЕ: WASD — движение, МЫШЬ — прицел, ЛКМ — стрельба<br>
+                    ESC — пауза
+                </p>
+                <button id="startButton">НАЧАТЬ ИГРУ</button>
+            </div>
+        </div>
+
+        <!-- КНОПКА ПАУЗЫ -->
+        <button id="pauseBtn">⏸ ПАУЗА</button>
+
+        <!-- МЕНЮ ПАУЗЫ -->
+        <div id="pauseMenu">
+            <div id="pauseMenuContent">
+                <h2>⏸ ПАУЗА</h2>
+                <button id="resumeBtn">▶ ПРОДОЛЖИТЬ</button>
+                <button id="restartBtn">🔄 НАЧАТЬ ЗАНОВО</button>
+                <button id="quitBtn">🏠 ВЫЙТИ В МЕНЮ</button>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
